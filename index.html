@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#14392f" />
+  <meta name="description" content="Greenpath Career OS: roadmap, bank kompetisi, ESG & energy career tracker, beasiswa S2 Eropa, dan sumber belajar dalam satu website." />
+  <title>Greenpath — Career & Scholarship OS</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navigasi utama">
+      <a class="brand" href="#dashboard" aria-label="Greenpath Dashboard">
+        <span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M5 32c6-1 12-5 15-14 3-8 9-11 15-10-1 13-8 24-26 25M12 21c5 0 10 4 11 11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg></span>
+        <span><strong>greenpath<span class="brand-dot">.</span></strong><small>your career fieldnotes</small></span>
+      </a>
+      <div class="sidebar-caption">PERSONAL WORKSPACE</div>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#dashboard" data-route="dashboard"><span class="nav-icon">◧</span><span>Overview</span></a>
+        <a href="#roadmap" data-route="roadmap"><span class="nav-icon">↗</span><span>Roadmap</span></a>
+        <a href="#competitions" data-route="competitions"><span class="nav-icon">♜</span><span>Bank Kompetisi</span><span class="nav-count" id="nav-count-comps"></span></a>
+        <a href="#careers" data-route="careers"><span class="nav-icon">▣</span><span>Green Jobs</span></a>
+        <a href="#scholarships" data-route="scholarships"><span class="nav-icon">✧</span><span>S2 & Beasiswa</span></a>
+        <a href="#tracker" data-route="tracker"><span class="nav-icon">☷</span><span>Application Tracker</span></a>
+        <a href="#skills" data-route="skills"><span class="nav-icon">✳</span><span>Skills & Portofolio</span></a>
+        <a href="#calendar" data-route="calendar"><span class="nav-icon">▦</span><span>Kalender</span></a>
+        <a href="#resources" data-route="resources"><span class="nav-icon">☼</span><span>Curated Resources</span></a>
+        <a href="#finance" data-route="finance"><span class="nav-icon">◎</span><span>Salary & Lifestyle</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="study-note"><div class="study-note-label">THE NORTH STAR</div><p>From environmental engineering to global energy & climate strategy.</p><span>2026 → 2032</span></div>
+        <p class="sidebar-version">Data per 17 Nov 2026 · v1.0</p>
+      </div>
+    </aside>
+    <div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
+    <div class="main-column">
+      <header class="topbar">
+        <div class="topbar-start">
+          <button class="icon-button mobile-menu" id="mobile-menu" aria-label="Buka menu">☰</button>
+          <div class="breadcrumb">MY WORKSPACE <span>/</span> <strong id="current-section">Overview</strong></div>
+        </div>
+        <div class="topbar-end"><span class="save-indicator" id="save-indicator"><span class="save-dot"></span> Tersimpan di perangkat ini</span><button class="button button-outline button-sm" id="top-export">↥ Backup data</button></div>
+      </header>
+      <main id="app" tabindex="-1"></main>
+      <footer class="site-footer">Built for intentional growth <span>·</span> Data referensi harus diverifikasi sebelum mendaftar <span>·</span> <button class="text-button" id="footer-backup">Kelola data</button></footer>
+    </div>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" role="status" aria-live="polite"></div>
+  <script src="data/seed.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
